@@ -1,6 +1,6 @@
 # punkweb-pwf
 
-Punkweb frontend client written using [pwf](https://github.com/Punkweb/punkweb-pwf)
+Punkweb frontend client written using [pwf](https://github.com/Punkweb/pwf)
 intended to replace [punkweb-frontend](https://github.com/Punkweb/punkweb-frontend).
 
 ## Install deps
