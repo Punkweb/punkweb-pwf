@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Punkweb</title>
+
+    <meta name="theme-color" content="#9f2121" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="A music release platform for amatuer musicians and producers." />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Punkweb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.punkweb.net" />
+    <meta property="og:image" content="http://www.punkweb.net/assets/img/mic-and-interface.jpg" />
+    <meta property="og:image:secure_url" content="http://www.punkweb.net/assets/img/mic-and-interface.jpg" />
+    <meta property="og:image:width" content="480" />
+    <meta property="og:image:height" content="270" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Punkweb" />
+    <meta property="twitter:description" content="A music release platform for amatuer musicians and producers." />
+    <meta property="twitter:image" content="https://www.punkweb.net/assets/img/mic-and-interface.jpg" />
+    <style>
+      @keyframes spinner {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .main-spinner:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -25px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top-color: #c92a2a;
+        border-bottom-color: #c92a2a;
+        animation: spinner 0.8s ease infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <app-root><div class="main-spinner"></div></app-root>
+    <script src="./app/app.tsx"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  </body>
+</html>
