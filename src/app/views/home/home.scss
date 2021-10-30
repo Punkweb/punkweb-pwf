@@ -1,4 +1,3 @@
-@import '../../../scss/mixins';
 @import '../../../scss/theming';
 
 ul {
@@ -6,7 +5,7 @@ ul {
 }
 
 blockquote {
-  font-size: 13px;
+  font-size: 14px;
   margin: 0;
   margin-bottom: 1rem;
 }
@@ -73,11 +72,11 @@ blockquote {
 }
 
 .success-text {
-  color: green;
+  color: $oc-green-9;
 }
 
 .error-text {
-  color: red;
+  color: $oc-red-9;
 }
 
 @media screen and (max-width: 680px) {
