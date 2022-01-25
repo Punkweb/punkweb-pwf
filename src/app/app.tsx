@@ -1,9 +1,19 @@
-import { pwf, jsx } from 'pwf';
+import { pwf } from 'pwf';
 import { Auth } from './services';
 import { Error404, Home, Login, SignUp } from './views';
 import Nav from './components/nav';
 import '../scss/defaults.scss';
 import './app.scss';
+
+// TODO: Make pwf export this so that it doesn't have to be in the project
+declare global {
+  namespace JSX {
+    type Element = any;
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
 
 if (Auth.isLoggedIn()) {
   Auth.getUser(localStorage.getItem('uid'));
@@ -14,46 +24,38 @@ let root = document.querySelector('app-root');
 pwf.router.init(root, [
   {
     path: '/',
-    component: () => {
-      return (
-        <div>
-          <Nav />
-          <Home />
-        </div>
-      );
-    },
+    component: () => (
+      <>
+        <Nav />
+        <Home />
+      </>
+    ),
   },
   {
     path: '/login/',
-    component: () => {
-      return (
-        <div>
-          <Nav />
-          <Login />
-        </div>
-      );
-    },
+    component: () => (
+      <>
+        <Nav />
+        <Login />
+      </>
+    ),
   },
   {
     path: '/sign-up/',
-    component: () => {
-      return (
-        <div>
-          <Nav />
-          <SignUp />
-        </div>
-      );
-    },
+    component: () => (
+      <>
+        <Nav />
+        <SignUp />
+      </>
+    ),
   },
   {
     path: '/:404',
-    component: () => {
-      return (
-        <div>
-          <Nav />
-          <Error404 />
-        </div>
-      );
-    },
+    component: () => (
+      <>
+        <Nav />
+        <Error404 />
+      </>
+    ),
   },
 ]);

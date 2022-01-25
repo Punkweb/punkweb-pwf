@@ -9,7 +9,7 @@
   "author": "Punkweb (https://github.com/Punkweb/)",
   "license": "ISC",
   "dependencies": {
-    "pwf": "^0.2.4",
+    "pwf": "^0.3.1",
     "rxjs": "^7.4.0"
   },
   "devDependencies": {

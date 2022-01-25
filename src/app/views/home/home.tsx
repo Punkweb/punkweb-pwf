@@ -1,4 +1,4 @@
-import { jsx } from 'pwf';
+import { pwf } from 'pwf';
 import { API } from '../../services';
 import micAndInterface from '../../../assets/img/mic-and-interface.jpg';
 import './home.scss';
@@ -33,15 +33,15 @@ function submitContactForm(e: any) {
 
 export default function Home() {
   return (
-    <div className="container">
-      <div className="panel">
-        <div className="home-header">
-          <div className="home-header__img-wrap">
-            <img attrs={{ src: micAndInterface, alt: '' }} />
+    <div class="container">
+      <div class="panel">
+        <div class="home-header">
+          <div class="home-header__img-wrap">
+            <img src={micAndInterface} alt="Punkweb" />
           </div>
-          <h1 className="home-header__title">Punkweb</h1>
+          <h1 class="home-header__title">Punkweb</h1>
         </div>
-        <div className="panel-body padding">
+        <div class="panel-body padding">
           <p>Punkweb is a music release platform for amatuer musicians and producers.</p>
           <h4>What can Punkweb offer me as an artist?</h4>
           <ul>
@@ -60,53 +60,43 @@ export default function Home() {
           </p>
           <h4>Contact Us</h4>
           {!contactSuccess && (
-            <form className="contact-form" on={{ submit: (e) => submitContactForm(e) }}>
+            <form class="contact-form" onSubmit={(e: any) => submitContactForm(e)}>
               <blockquote>
                 The site is under construction, but we're looking for artists who're interested in joining today.
                 <br />
                 Shoot us your email and some brief information about your act and we'll send you an email reply.
               </blockquote>
-              <small className="margin-bottom">Replies will be sent to the email entered below.</small>
+              <small class="margin-bottom">Replies will be sent to the email entered below.</small>
               <input
-                className="margin-bottom"
-                attrs={{ type: 'email', placeholder: 'Email' }}
-                on={{
-                  input: (e: any) => {
-                    email = e.target.value;
-                  },
+                class="margin-bottom"
+                type="email"
+                placeholder="Email"
+                onInput={(e: any) => {
+                  email = e.target.value;
                 }}
               />
               <input
-                className="margin-bottom"
-                attrs={{ type: 'text', placeholder: 'Subject' }}
-                on={{
-                  input: (e: any) => {
-                    subject = e.target.value;
-                  },
+                class="margin-bottom"
+                type="text"
+                placeholder="Subject"
+                onInput={(e: any) => {
+                  subject = e.target.value;
                 }}
               />
               <textarea
-                className="margin-bottom"
-                attrs={{ placeholder: 'Body' }}
-                on={{
-                  input: (e: any) => {
-                    body = e.target.value;
-                  },
+                class="margin-bottom"
+                placeholder="Body"
+                onInput={(e: any) => {
+                  body = e.target.value;
                 }}
               ></textarea>
-              {contactError && <p className="error-text">{contactError}</p>}
-              <button
-                className="button-primary"
-                attrs={{
-                  type: 'submit',
-                  disabled: !email || !subject || !body,
-                }}
-              >
+              {contactError && <p class="error-text">{contactError}</p>}
+              <button class="button-primary" type="submit" disabled={!email || !subject || !body}>
                 Send
               </button>
             </form>
           )}
-          {contactSuccess && <p className="success-text">{contactSuccess}</p>}
+          {contactSuccess && <p class="success-text">{contactSuccess}</p>}
         </div>
       </div>
     </div>

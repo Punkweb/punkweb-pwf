@@ -8,6 +8,7 @@
     "strictFunctionTypes": false,
     "moduleResolution": "node",
     "jsx": "react",
-    "jsxFactory": "jsx"
+    "jsxFactory": "pwf.jsx.element",
+    "jsxFragmentFactory": "pwf.jsx.fragment"
   }
 }

@@ -18,7 +18,7 @@ html,
 body {
   background-color: $body-background;
   color: $default-text;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat', Helvetica;
   font-size: 100%;
   margin: 0;
   padding: 0;
@@ -241,8 +241,8 @@ textarea {
     border-radius: 2px;
     box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
     color: $default-text;
-    font-size: 16px;
-    min-height: 3rem;
+    font-size: 14px;
+    font-family: 'Montserrat', Helvetica;
     outline: none;
     padding: 0.5rem;
     transition: box-shadow 0.25s ease-in-out;
@@ -426,16 +426,17 @@ progress::-webkit-progress-value {
   border-radius: 2px;
   color: $color !important;
   cursor: pointer;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat', Helvetica;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   outline: none;
-  padding: 0.75rem 1rem;
-  min-width: 100px;
-  min-height: 3rem;
+  padding: 0.5rem 1rem;
+  min-width: 64px;
   text-align: center;
   text-decoration: none !important;
+  text-transform: uppercase;
   transition: all 0.25s ease-in-out;
+
   &:hover {
     background-color: lighten($background, 5%);
     border-color: lighten($background, 5%);
